@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lock:project xmlns:lock="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <lock:modelVersion>4.0.0</lock:modelVersion>
+    <lock:parent>
+        <lock:groupId>org.springframework.boot</lock:groupId>
+        <lock:artifactId>spring-boot-starter-parent</lock:artifactId>
+        <lock:version>3.2.2</lock:version>
+        <lock:relativePath/>
+    </lock:parent>
+
+    <lock:groupId>com.yowyob</lock:groupId>
+    <lock:artifactId>apigateway</lock:artifactId>
+    <lock:version>0.0.1-SNAPSHOT</lock:version>
+    <lock:name>apigateway</lock:name>
+    <lock:description>API Gateway for Education Platform</lock:description>
+
+    <lock:properties>
+        <lock:java.version>17</lock:java.version>
+        <lock:spring-cloud.version>2023.0.0</lock:spring-cloud.version>
+    </lock:properties>
+
+    <lock:dependencies>
+        <!-- Spring Cloud Gateway -->
+        <lock:dependency>
+            <lock:groupId>org.springframework.cloud</lock:groupId>
+            <lock:artifactId>spring-cloud-starter-gateway</lock:artifactId>
+        </lock:dependency>
+
+        <!-- Eureka Client -->
+        <lock:dependency>
+            <lock:groupId>org.springframework.cloud</lock:groupId>
+            <lock:artifactId>spring-cloud-starter-netflix-eureka-client</lock:artifactId>
+        </lock:dependency>
+
+        <!-- Actuator -->
+        <lock:dependency>
+            <lock:groupId>org.springframework.boot</lock:groupId>
+            <lock:artifactId>spring-boot-starter-actuator</lock:artifactId>
+        </lock:dependency>
+
+        <lock:dependency>
+            <lock:groupId>org.projectlombok</lock:groupId>
+            <lock:artifactId>lombok</lock:artifactId>
+            <lock:optional>true</lock:optional>
+        </lock:dependency>
+
+        <!-- Test Dependencies -->
+        <lock:dependency>
+            <lock:groupId>org.junit.jupiter</lock:groupId>
+            <lock:artifactId>junit-jupiter-engine</lock:artifactId>
+            <lock:version>5.9.2</lock:version>
+            <lock:scope>test</lock:scope>
+        </lock:dependency>
+        <lock:dependency>
+            <lock:groupId>org.junit.jupiter</lock:groupId>
+            <lock:artifactId>junit-jupiter-api</lock:artifactId>
+            <lock:version>5.9.2</lock:version>
+            <lock:scope>test</lock:scope>
+        </lock:dependency>
+        <lock:dependency>
+            <lock:groupId>org.junit.platform</lock:groupId>
+            <lock:artifactId>junit-platform-commons</lock:artifactId>
+            <lock:version>1.9.2</lock:version>
+            <lock:scope>test</lock:scope>
+        </lock:dependency>
+        <lock:dependency>
+            <lock:groupId>org.junit.platform</lock:groupId>
+            <lock:artifactId>junit-platform-engine</lock:artifactId>
+            <lock:version>1.9.2</lock:version>
+            <lock:scope>test</lock:scope>
+        </lock:dependency>
+        <lock:dependency>
+            <lock:groupId>org.springframework.boot</lock:groupId>
+            <lock:artifactId>spring-boot-starter-test</lock:artifactId>
+            <lock:scope>test</lock:scope>
+        </lock:dependency>
+        <lock:dependency>
+            <lock:groupId>org.junit.jupiter</lock:groupId>
+            <lock:artifactId>junit-jupiter</lock:artifactId>
+            <lock:scope>test</lock:scope>
+        </lock:dependency>
+
+    </lock:dependencies>
+
+    <lock:dependencyManagement>
+        <lock:dependencies>
+            <lock:dependency>
+                <lock:groupId>org.springframework.cloud</lock:groupId>
+                <lock:artifactId>spring-cloud-dependencies</lock:artifactId>
+                <lock:version>${spring-cloud.version}</lock:version>
+                <lock:type>pom</lock:type>
+                <lock:scope>import</lock:scope>
+            </lock:dependency>
+        </lock:dependencies>
+    </lock:dependencyManagement>
+
+	<lock:build>
+		<lock:plugins>
+			<lock:plugin>
+				<lock:groupId>org.apache.maven.plugins</lock:groupId>
+				<lock:artifactId>maven-surefire-plugin</lock:artifactId>
+				<lock:version>3.0.0-M5</lock:version>
+			</lock:plugin>
+			<lock:plugin>
+				<lock:groupId>org.springframework.boot</lock:groupId>
+				<lock:artifactId>spring-boot-maven-plugin</lock:artifactId>
+			</lock:plugin>
+		</lock:plugins>
+	</lock:build>
+</lock:project>
